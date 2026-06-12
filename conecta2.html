@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conecta2 – Estudiantes ayudando estudiantes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: #f7f9fc;
+      color: #1a1a2e;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem 2.5rem;
+      border-bottom: 3px solid #f0f0f0;
+    }
+
+    .logo-container {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo-text {
+      font-size: 5rem;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .logo-text .c { color: #f472b6; }
+    .logo-text .o { color: #facc15; }
+    .logo-text .n { color: #4ade80; }
+    .logo-text .e { color: #f97316; }
+    .logo-text .c2 { color: #60a5fa; }
+    .logo-text .t { color: #a78bfa; }
+    .logo-text .a { color: #4ade80; }
+    .logo-text .two {
+      font-size: 5rem;
+      color: #f472b6;
+      display: block;
+      line-height: 0.9;
+    }
+
+    .laptop-icon {
+      font-size: 5rem;
+      margin: 0.5rem 0 1rem;
+    }
+
+    .lema {
+      display: inline-block;
+      background: #fef9c3;
+      border: 2px dashed #facc15;
+      border-radius: 999px;
+      padding: 0.5rem 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #92400e;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ── SECTIONS ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border: 2px solid #e5e7eb;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .icon-pink   { background: #fce7f3; }
+    .icon-green  { background: #dcfce7; }
+    .icon-blue   { background: #dbeafe; }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1a1a2e;
+    }
+
+    .section p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #374151;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .step-card {
+      border-radius: 14px;
+      padding: 1.2rem 1rem;
+      text-align: center;
+    }
+
+    .step-card .step-emoji { font-size: 2rem; margin-bottom: 0.4rem; }
+    .step-card .step-label { font-size: 0.88rem; font-weight: 700; line-height: 1.35; }
+
+    .step-pink   { background: #fce7f3; color: #9d174d; }
+    .step-yellow { background: #fef9c3; color: #854d0e; }
+    .step-green  { background: #dcfce7; color: #14532d; }
+    .step-blue   { background: #dbeafe; color: #1e3a8a; }
+    .step-purple { background: #ede9fe; color: #4c1d95; }
+
+    /* ── MATERIAS ── */
+    .subjects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .subject-pill {
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .pill-pink   { background: #fce7f3; color: #9d174d; }
+    .pill-green  { background: #dcfce7; color: #14532d; }
+    .pill-blue   { background: #dbeafe; color: #1e3a8a; }
+    .pill-yellow { background: #fef9c3; color: #854d0e; }
+    .pill-purple { background: #ede9fe; color: #4c1d95; }
+    .pill-orange { background: #ffedd5; color: #7c2d12; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+      border-top: 2px solid #f0f0f0;
+      background: #fff;
+    }
+
+    footer strong { color: #f472b6; }
+
+    @media (max-width: 500px) {
+      .logo-text { font-size: 3.5rem; }
+      .logo-text .two { font-size: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="logo-container">
+      <div class="logo-text">
+        <span class="c">C</span><span class="o">o</span><span class="n">n</span><span class="e">e</span><span class="c2">c</span><span class="t">t</span><span class="a">a</span><span class="two">2</span>
+      </div>
+    </div>
+    <div class="laptop-icon">💻</div>
+    <div class="lema">✨ "Estudiantes ayudando estudiantes"</div>
+  </header>
+
+  <main class="container">
+
+    <!-- ¿Qué es? -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-pink">📖</div>
+        <h2 class="section-title">¿En qué consiste?</h2>
+      </div>
+      <p>
+        <strong>Conecta2</strong> es un grupo de alumnos que realizan tutoriales mediante
+        <strong>videos explicativos, guías y materiales de apoyo</strong> en diferentes asignaturas.
+        El propósito es facilitar el aprendizaje y el estudio de una forma accesible y conveniente,
+        para que cada estudiante pueda aprender a su propio ritmo.
+      </p>
+      <div class="subjects">
+        <span class="subject-pill pill-blue">Matemáticas</span>
+        <span class="subject-pill pill-green">Ciencias</span>
+        <span class="subject-pill pill-pink">Lenguaje</span>
+        <span class="subject-pill pill-yellow">Inglés</span>
+        <span class="subject-pill pill-purple">Historia</span>
+        <span class="subject-pill pill-orange">Y más...</span>
+      </div>
+    </div>
+
+    <!-- ¿Cómo funciona? -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-green">⚙️</div>
+        <h2 class="section-title">¿Cómo funciona?</h2>
+      </div>
+      <div class="steps">
+        <div class="step-card step-pink">
+          <div class="step-emoji">🎬</div>
+          <div class="step-label">Estudiantes voluntarios graban videos explicativos</div>
+        </div>
+        <div class="step-card step-yellow">
+          <div class="step-emoji">👩‍🏫</div>
+          <div class="step-label">Con apoyo y revisión de profesores</div>
+        </div>
+        <div class="step-card step-green">
+          <div class="step-emoji">📡</div>
+          <div class="step-label">Se transmite en reuniones de Zoom o Meet</div>
+        </div>
+        <div class="step-card step-blue">
+          <div class="step-emoji">📂</div>
+          <div class="step-label">Se sube a un Classroom exclusivo del proyecto</div>
+        </div>
+        <div class="step-card step-purple">
+          <div class="step-emoji">❓</div>
+          <div class="step-label">Espacios de preguntas y material de apoyo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Videos tutoriales -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-icon icon-blue">🎥</div>
+        <h2 class="section-title">Videos tutoriales — Aprende a tu ritmo</h2>
+      </div>
+      <p>
+        Los alumnos graban <strong>videos cortos</strong> explicando contenidos, resolviendo
+        ejercicios paso a paso y entregando consejos de estudio. Además, en el Classroom
+        habrá material de apoyo descargable y un espacio dedicado a responder tus preguntas.
+        <br /><br />
+        <em>Todo hecho por alumnos, para alumnos. 🎓</em>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Proyecto <strong>Conecta2</strong> · Mi Proyecto, Mi Cambio</p>
+    <p style="margin-top:0.3rem;">Estudiantes ayudando estudiantes 💚</p>
+  </footer>
+
+</body>
+</html>
